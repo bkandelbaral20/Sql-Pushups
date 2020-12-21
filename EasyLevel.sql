@@ -87,3 +87,14 @@ WHERE  city  LIKE 'A%'
    or city  LIKE 'I%'
    or city  LIKE 'O%'
    or city  LIKE 'U%';
+
+
+-- 11.
+-- Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates.
+
+SELECT DISTINCT City From STATION
+WHERE  city  LIKE '%A'
+   or  city  LIKE '%E'
+   or city  LIKE '%I'
+   or city  LIKE '%O'
+   or city  LIKE '%U';
