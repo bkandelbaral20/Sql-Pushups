@@ -20,3 +20,14 @@ where population > 100000 AND CountryCode='USA';
 
 SELECT Name from City
 where population > 120000 AND CountryCode='USA';
+
+-- 3.
+-- Query all columns (attributes) for every row in the CITY table.
+
+SELECT * from City;
+
+-- 4.
+-- Query all columns for a city in CITY with the ID 1661.
+
+SELECT * from City
+where id= 1661;
