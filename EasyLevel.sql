@@ -204,3 +204,19 @@ where (City Not LIKE 'a%'
 SELECT Name FROM STUDENTS
 WHERE Marks > 75
 ORDER BY RIGHT(Name, 3), ASC ID;
+
+-- 18.
+-- Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
+
+--  COLUMN             TYPE
+--  employee_Id        INTEGER
+--  Name               String
+--  Months            INTEGER
+--  Salary            INTEGER
+
+
+-- where employee_id is an employee's ID number, name is their name, months is the total number of months they've
+-- been working for the company, and salary is their monthly salary.
+
+SELECT name from Employee
+order by Name;
