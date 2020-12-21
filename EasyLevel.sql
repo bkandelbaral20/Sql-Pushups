@@ -201,9 +201,10 @@ where (City Not LIKE 'a%'
 
 -- The Name column only contains uppercase (A-Z) and lowercase (a-z) letters.
 
-SELECT Name FROM STUDENTS
+SELECT Name
+FROM STUDENTS
 WHERE Marks > 75
-ORDER BY RIGHT(Name, 3), ASC ID;
+ORDER BY RIGHT (Name, 3), ASC ID;
 
 -- 18.
 -- Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
@@ -218,5 +219,33 @@ ORDER BY RIGHT(Name, 3), ASC ID;
 -- where employee_id is an employee's ID number, name is their name, months is the total number of months they've
 -- been working for the company, and salary is their monthly salary.
 
-SELECT name from Employee
+SELECT name
+from Employee
 order by Name;
+
+-- 19.
+-- Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a
+-- salary greater than $2000 per month who have been employees for less than 10 months. Sort your result
+-- by ascending employee_id.
+
+SELECT name
+from Employee
+where salary > 2000
+  AND months < 10
+Order BY employee_Id;
+
+-- 20.
+-- Write a query identifying the type of each record in the TRIANGLES table using its three side lengths. Output one of the following statements for each record in the table:
+
+-- Equilateral: It's a triangle with  sides of equal length.
+-- Isosceles: It's a triangle with  sides of equal length.
+-- Scalene: It's a triangle with  sides of differing lengths.
+-- Not A Triangle: The given values of A, B, and C don't form a triangle.
+
+SELECT CASE
+           WHEN (A + B <= C) OR (B + C <= A) OR (A + C <= B) THEN "Not A Triangle"
+           WHEN (A = B) AND (B = C) THEN "Equilateral"
+           WHEN (A = B) OR (C = A) OR (B = C) THEN "Isosceles"
+           ELSE "Scalene"
+           END
+FROM TRIANGLES;
