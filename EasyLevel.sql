@@ -43,3 +43,26 @@ where CountryCode='JPN';
 
 SELECT name from City
 where CountryCode='JPN';
+
+-- 7.
+-- Query a list of CITY and STATE from the STATION table.
+-- The STATION table is described as follows:
+
+-- Field       Type
+-- ID          NUMBER
+-- City        varchar
+-- State       varchar
+-- lat_N       number
+-- Long_W      number
+
+-- where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+SELECT City AND STATE from Station;
+
+-- 8.
+-- Query a list of CITY names from STATION for cities that have an even ID number.
+-- Print the results in any order, but exclude duplicates from the answer.
+
+SELECT DISTINCT CITY FROM STATION
+WHERE id % 2 = 0
+ORDER BY CITY;
