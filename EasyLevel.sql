@@ -31,3 +31,15 @@ SELECT * from City;
 
 SELECT * from City
 where id= 1661;
+
+-- 5.
+-- Query all attributes of every Japanese city in the CITY table. The COUNTRYCODE for Japan is JPN.
+
+SELECT * from City
+where CountryCode='JPN';
+
+-- 6.
+-- Query the names of all the Japanese cities in the CITY table. The COUNTRYCODE for Japan is JPN.
+
+SELECT name from City
+where CountryCode='JPN';
