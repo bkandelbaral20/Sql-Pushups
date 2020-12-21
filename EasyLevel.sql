@@ -127,3 +127,12 @@ where City Not LIKE 'a%'
    OR CITY Not LIKE 'i%'
    OR CITY Not LIKE 'o%'
    OR CITY Not LIKE 'u%';
+
+-- 14.
+-- Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates.
+SELECT DISTINCT City from Station
+where City Not LIKE '%a'
+   OR CITY Not LIKE '%e'
+   OR CITY Not LIKE '%i'
+   OR CITY Not LIKE '%o'
+   OR CITY Not LIKE '%u';
